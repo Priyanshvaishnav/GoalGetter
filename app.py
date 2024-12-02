@@ -7,8 +7,7 @@ app = Flask(__name__)
 db = mysql.connector.connect(
  host="localhost",
  user="root",
- password="priyansh",
- database="goalgetter"
+ password="Priyansh@123",
 )
 cursor = db.cursor()
 
@@ -35,4 +34,4 @@ def delete_task(task_id):
  return redirect('/')
 
 if __name__ == '__main__':
- app.run(debug=True)
+ app.run(debug=True, host='0.0.0.0', port=5000)
